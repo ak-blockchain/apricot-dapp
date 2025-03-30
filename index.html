@@ -1,0 +1,316 @@
+<head>
+    <title>Beans App</title>
+    <link rel="stylesheet" href="styles.css"></link>
+    <link rel="icon" type="image/x-icon" href="assets/op_logo.png">
+</head>
+
+<body style=>
+
+    <img id="mainLogo" src="assets/op_logo.png">
+   <!-- <img id="floor" src="assets/floor.png"> --> 
+    <img id="floating1"  src="assets/op_logo.png">
+    <img id="floating2"  src="assets/op_logo.png">
+
+
+
+    <button id="walletCircle">
+        <img id="walletImage" src="assets/walletSymbol.png">
+    </button>
+    <div id="usersWallet">Not Connected</div>
+
+    <div id="menuDiv" style="display: block">
+
+        <button id="btn_menu" class="menuButton menuButton_clickable">
+            <img src="assets/dash_white.png" class="menuImage">
+            <h2 class="menuText">Dashboard</h2>
+        </button>
+
+        <button id="btn_account" class="menuButton menuButton_clickable">
+            <img src="assets/acc_white.png" class="menuImage">
+            <h2 class="menuText">Account</h2>
+        </button>
+
+        <button id="btn_calc" class="menuButton menuButton_clickable">
+            <img src="assets/calc_white.png" class="menuImage">
+            <h2 class="menuText">Calculator</h2>
+        </button>
+
+        <button id="btn_docs" class="menuButton menuButton_clickable">
+            <img src="assets/op_white.png" class="menuImage">
+            <h2 class="menuText">Website</h2>
+        </button>
+
+        <!-- 
+		<button id="btn_flooz" class="menuButton menuButton_clickable">
+            <img src="assets/tick_white.png" class="menuImage">
+            <h2 class="menuText">(New!) Fiat/BNB Swap</h2>
+        </button>
+        -->
+        
+    </div>
+
+    <div id="pairAddressBlock">
+        <h6 class="pairAddress">BEANS:&nbsp
+            <a id="pair" class="pairHref" href="https://bscscan.com" target="_blank" rel="noopener noreferrer">
+                0xd51...28b
+            </a>
+        </h6> 
+        <button class="copySquare"  id="copyToken">
+            <img src="assets/copy.png" class="copyImage" id="tokenClipboard">
+            <img src="assets/tick_white.png" class="copyImageTick" id="tokenTick">
+        </button>
+
+        <h6 class="pairAddress">Pair:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a id="pair" class="pairHref" href="https://bscscan.com" target="_blank" rel="noopener noreferrer">
+                0xC39...fB7 
+            </a>
+        </h6>
+        <button class="copySquare"  id="copyPair">
+            <img src="assets/copy.png" class="copyImage" id="pairClipboard">
+            <img src="assets/tick_white.png" class="copyImageTick" id="pairTick">
+        </button>
+    </div>
+
+    <div id="cryptologosbar">
+        <a href="https://bscscan.com/contract/0xd51CB10cc1607e86A5def54EE3bE806A7df8528b" target="_blank" rel="noopener noreferrer" style="color: transparent">
+        <img class="cryptologo" src="assets/cryptologos/bscscan.png">
+        </a>
+
+        <a href="https://t.me/OverpoweredPORTAL" target="_blank" rel="noopener noreferrer" style="color: transparent">
+            <img class="cryptologo" src="assets/cryptologos/telegram.png">
+        </a>
+
+        <a href="https://twitter.com/overoverpowered" target="_blank" rel="noopener noreferrer" style="color: transparent">
+        <img class="cryptologo" src="assets/cryptologos/twitter.png">
+        </a>
+
+        <a href="https://coinmarketcap.com" target="_blank" rel="noopener noreferrer" style="color: transparent">
+        <img class="cryptologo tbc" src="assets/cryptologos/cmc.png">
+        </a>
+
+        <a href="https://coingecko.com" target="_blank" rel="noopener noreferrer" style="color: transparent">
+        <img class="cryptologo tbc" src="assets/cryptologos/coingecko.png">
+        </a>
+    </div>
+
+    <div id="homepage">
+
+        <table class="statTable fullWidth">
+
+            <tr>
+                <td> 
+                    <h4>Market Cap</h4>
+                    <h3 id="marketCap">Connect!</h3>
+                </td>
+
+                <td>
+                    <h4>$BEANS Price</h4>
+                    <h3 id="tokenPrice">Connect!</h3>
+                </td>
+
+                <td>
+                    <h4>Next Rebase</h4>
+                    <h3 class="rebaseCountdown">00:15:00</h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <h4>Circulating Supply</h4>
+                    <h3 id="circulatingSupply">325,000</h3>
+                </td>
+
+                <td>
+                    
+                </td>
+
+                <td>
+                   <!-- <h4>LF</h4>
+                    <h3>G</h3>-->
+                </td>
+            </tr>
+
+        </table>
+
+        <div class="statTable" id="treasuryValueBlock">
+            <h4>Tokens in Treasury</h4>
+            <h3 id="treasuryValue">Connect!</h3>
+        </div>
+
+        <div class="statTable" id="poolValueBlock">
+            <h4>Pool Value</h4>
+            <h3 id="poolValue">Connect!</h3>
+        </div>
+
+        <div class="statTable" id="leftThirdBlock">
+            <h4>Tokens Burnt</h4>
+            <h3 id="firePitBalance">Connect!</h3>
+        </div>
+
+        <div class="statTable" id="middleThirdBlock">
+            <img id="floor" src="assets/floor.png">
+        </div>
+
+        <div class="statTable" id="rightThirdBlock">
+            <h4>% of Supply Burnt</h4>
+            <h3 id="percentFirePit">Connect!</h3>
+        </div>
+
+    </div>
+
+
+    <!-- ACCOUNT -->
+    <div id="account" style="display: none;">
+
+        <table class="statTable centralWidth">
+
+            <tr>
+                <td> 
+                    <h4>Your Balance</h4>
+                    <h3 id="yourBalance">0</h3>
+                    <h5>$BEANS</h5>
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                    <h4>APY</h4>
+                    <h3 id="apy">400,977%</h3>
+                    <h5>Daily ROI 2.35%</h5>
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                    <h4>Next Rebase</h4>
+                    <h3 class="rebaseCountdown">00:15:00</h3>
+                </td>
+            </tr>
+        </table>
+
+        <table class="statTable centralWidth" style="position: absolute; top: 520px;">
+
+            <tr class="listRow">
+                <td class="listLeft"> 
+                    <h4>Current $BEANS Price</h4>
+                </td>
+                <td class="listRight">
+                    <h3 id="accountPrice">0</h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="listLeft"> 
+                    <h4>Next Reward Amount</h4>
+                </td>
+                <td class="listRight">
+                    <h3 id="accountNextReward">0 $BEANS</h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="listLeft"> 
+                    <h4>Next Reward USD</h4>
+                </td>
+                <td class="listRight">
+                    <h3 id="accountNextUSD">$0.00</h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="listLeft"> 
+                    <h4>ROI (5-day-rate)</h4>
+                </td>
+                <td class="listRight">
+                    <h3>11.96%</h3>
+                </td>
+            </tr>
+
+        </table>
+
+      
+
+    </div>
+ 
+
+    <!-- CALCULATOR-->
+    <div id="calculator" style="display: none;">
+       
+        <table class="statTable fullWidth">
+            <tr>
+                <td> 
+                    <h4>$BEANS Price</h4>
+                    <h3 id="calcPrice">0</h3>
+                    <h5></h5>
+                </td>
+                <td> 
+                    <h4>Current APY</h4>
+                    <h3 id="calcAPY">0</h3>
+                    <h5></h5>
+                </td>
+                <td style="padding-top: 10px"> 
+                    <h4>Your Balance</h4>
+                    <h3 id="calcBalance">0</h3>
+                </td>
+            </tr>
+        </table>
+
+        <div class="inputBlock left" id="tokenAmountBlock">
+            <h5 class="inputLabel">Token Amount</h5>
+            <input class="stakeInput" id="tokenAmountInput" placeholder="0" value="0" oninput="doFunction(0)">
+                <button class="maxCalc" id="maxSafuuAmount" onclick="maxAmount()"> MAX </button> 
+         </input>
+        </div>
+
+        <div class="inputBlock right" id="APYBlock">
+            <h5 class="inputLabel">APY (%)</h5>
+            <input class="stakeInput" id="apyInput" placeholder="0" value="400,977" oninput="updateSlider(-1)" disabled="disabled">
+              <!--  <button class="maxCalc" id="maxSafuuAmount" onclick="currentAPY()"></button> -->
+            </input>
+        </div>
+
+        <div class="inputBlock left" id="tokenPricePurchaseBlock">
+            <h5 class="inputLabel">$BEANS Price at Purchase ($)</h5>
+            <input class="stakeInput" id="tokenPriceInput" placeholder="0" value="0.0"  oninput="updateSlider(-1)">
+                <button class="maxCalc" id="maxSafuuAmount" onclick="currentPrice()"> CURRENT </button> 
+            </input>
+        </div>
+
+        <div class="inputBlock right" id="tokenPriceFutureBlock">
+            <h5 class="inputLabel">Future $BEANS Price ($)</h5>
+            <input class="stakeInput" id="tokenPriceFutureInput" placeholder="0" value="0.0" oninput="updateSlider(-1)">
+                <button class="maxCalc" id="maxSafuuAmount" onclick="currentFuture()"> CURRENT </button> 
+            </input>
+        </div>
+
+        <div class="slidecontainer">
+            <h2 id="selectedRange">1 day</h2>
+            <input type="range" min="1" max="100" value="1" class="slider" id="myRange" oninput="updateSlider(this.value)">
+        </input> 
+            <h4 class="calc_left" style="top:80px">Your Initial Investment ($)</h4>
+            <h4 class="calc_right" style="top:80px" id="calc_initial">$0.00</h4>
+
+            <h4 class="calc_left" style="top: 120px">$BEANS Rewards Estimation</h4>
+            <h4 class="calc_right" style="top: 120px" id="calc_rewards">0</h4>
+
+            <h4 class="calc_left" style="top: 160px">Potential Return ($)</h4>
+            <h4 class="calc_right" style="top: 160px" id="calc_return">$0.00</h4>
+
+          </div>
+
+    </div>
+
+
+    <!--
+	<div id="flooz" style="display: none;">
+        <iframe width="400" height="650" src="https://www.flooz.trade/embedded/0xd51cb10cc1607e86a5def54ee3be806a7df8528b/?refId=oqrLaa&chainId=56&backgroundColor=transparent" title="Flooz Trade for OP" frameborder="0" allow="clipboard-read; clipboard-write; web-share; accelerometer *; autoplay *; camera *; gyroscope *; payment *"
+		style="border: 2px solid #f5dc82; border-radius: 20px; position: absolute; top: 100px; left: 50%; transform: translateX(-50%)"> 
+		</iframe>
+    </div>
+    -->
+
+    <!-- <script src="obcss.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <script src="https://unpkg.com/@walletconnect/web3-provider@1.7.1/dist/umd/index.min.js"></script>
+    -->
+    <script type="module" src="dapp.js"></script>
+</body>

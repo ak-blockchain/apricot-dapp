@@ -1,0 +1,553 @@
+:root {
+    --pageBg: #050809;
+    --mainColor:  #f5dc82;
+    --mainColorFaded: #987700;/*#c6542487;*/
+    --pageBgFaded: #3232328e;
+
+    --orange: #D94E28;
+    --yellow: #FFFA9B;
+    --transOrange: #573526;
+    --referrer: #646464;
+    --reward: #8A7B5A;
+    --grayed: #262626;
+}
+
+body {
+    background-color: #ffe072;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+}
+
+/*
+    Top Bar
+*/
+#mainLogo {
+    position: absolute;
+    left: 8px;
+    top: 10px;
+    width: 150px;
+}
+#floor {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%; 
+}
+#floating1 {
+    position: absolute;
+    width: 200px;
+    bottom: 160px;
+    left: 60px;
+    transform: rotate(60deg);
+}
+#floating2 {
+    position: absolute;
+    width: 400px;
+    bottom: 100px;
+    right: 60px;
+    transform: rotate(-30deg);
+}
+
+#walletCircle {
+    width: 55px;
+    height: 55px;
+    border-radius: 80px;
+    background-color: transparent;   
+    border: 2.5px solid white; 
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+#walletCircle:hover {
+    background-color: var(--transOrange);
+    cursor: pointer;
+    border: 2.5px solid var(--mainColor);
+}
+
+#walletImage {
+    width: 44px;
+    position: absolute;
+    left: 3.1px;
+    top: 3px;
+}
+
+#usersWallet {
+    font-weight: 600;
+    font-size: 1.3em;
+    text-align: right;
+    color:black;
+    position: absolute;
+    right: 80px;
+    top: 28px;
+}
+
+/*
+    Menu
+*/
+#menuDiv {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+}
+
+.menuButton {
+    height: 50px;
+    width: 270px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: rgb(100, 92, 0);
+    border-width: 0px;
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.menuButton_selected {
+   /* background-color: var(--orange);*/
+   color: var(--mainColor);
+}
+.menuButton_unselected {
+    opacity: 0.4;
+}
+.menuButton_unselected:hover {
+    cursor: not-allowed;
+}
+.menuButton_clickable:hover {
+    cursor: pointer;
+    /*background-color: var(--mainColorFaded);*/
+    color: var(--mainColorFaded);
+}
+
+.menuImage {
+    width: 26px;
+    position: relative;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-52%);
+    float: left;
+    margin-left: 5px;
+}
+
+.menuText {
+    font-weight: 600;
+    font-size: large;
+    position: relative;
+    transform: translateY(-15%);
+    margin-left: 37px;
+}
+
+
+/* pair Address */
+#pairAddressBlock {
+    position: absolute;
+    bottom: 100px;
+    left: 30px;
+    line-height: 0px;
+}
+
+.pairAddress {
+    font-size: 0.9em;
+    color: black;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.pairHref {
+    font-weight: 200;
+    color: var(--transOrange);
+}
+
+.copySquare {
+    border-radius: 2px;
+    width: 20px;
+    height: 20px;
+    border: black;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    left: 140px;
+    background-color: transparent;
+   /* background-color: var(--transOrange);
+    opacity: 30%;
+    */
+}
+.copySquare:hover {
+    background-color: #d1a6091f;
+    cursor: pointer;
+}
+#copyToken {
+    top: 25px;
+}
+#copyPair {
+    top: 60px;
+}
+
+.copyImage {
+    width: 13px;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+
+.copyImageTick {
+    width: 13px;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    visibility: hidden;
+}
+
+/* Logos */
+#cryptologosbar {
+    position: absolute;
+    left: 30px;
+    bottom: 40px;
+}
+
+.cryptologo {
+    width: 20px;
+    margin-right: 10px;
+}
+.cryptologo:hover {
+    cursor: pointer;
+}
+
+.tbc {
+    opacity: 0.3;
+} 
+.tbc:hover {
+    cursor: not-allowed;
+}
+
+
+/*
+    SimpleStat
+*/ 
+
+.simpleStatBlock {
+    color: var(--mainColor);
+    width: 150px;
+    height: 80px;
+    border-radius: 20px;
+    background-color: rgba(58, 58, 58, 0.7);
+}
+
+.simpleStatLabel {
+    color: rgb(100, 92, 0);
+    text-align: center;
+    font-weight: 400;
+    font-size: larger;
+}
+
+.simpleStat {
+    margin-top: -10px;
+    text-align: center;
+}
+
+#block_simplestat {
+    position: absolute;
+    left: 0px; 
+    top: 0px;
+}
+
+/*
+    Stat Table
+*/
+
+#homepage {
+    position: absolute;
+    left: 250px;
+    width: calc(100% - 300px);
+    align-items: center;
+    /* for testing width 
+    border-radius: 30px;
+    border: 2px solid white; */
+}
+
+.statTable {
+    position: absolute;
+    background-color: #fff0ba; /* Classic light gray */
+    border: 2px solid #fff; /* Top/left highlight */
+    border-right: 2px solid #404040; /* Shadow right */
+    border-bottom: 2px solid #404040; /* Shadow bottom */
+    border-radius: 0px; /* Old-school was square */
+    top: 110px;
+    left: min(10%, 300px);
+    padding: -20px 20px;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    box-shadow: inset -1px -1px 0 #808080, inset 1px 1px 0 #ffffff;
+    user-select: none;
+    cursor: default;
+}
+.fullWidth {
+    width: 90%;
+  /*  max-width: 750px;*/
+}
+.centralWidth {
+    width: 75%;
+    left: 50%;
+    transform: translateX(-40%);
+  /*  max-width: 750px;*/
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 1.1em;
+    color: black;
+    margin-top: 15px;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 1.6em;
+    color: rgb(100, 92, 0);
+    margin-top: -15px;
+}
+h2 {
+    color: black;
+}
+
+#treasuryValueBlock {
+    position: absolute;
+    top: 350px;
+    height: 110px;
+    left: min(10%,600px);
+    width: calc(45% - 20px);
+   /* max-width: 355px;*/
+    padding-top: 15px;
+  /*  transform: translateX(-50%);*/
+
+}
+
+#poolValueBlock {
+    position: absolute;
+    top: 350px;
+    height: 110px;
+    left: auto; 
+    right: 0px;
+    width: calc(45% - 20px);
+    padding-top: 15px;
+}
+
+#leftThirdBlock {
+    top: 515px;
+    height: 110px;
+    left: min(10%,600px);
+    width: calc(30% - 20px);
+    padding-top: 15px;
+}
+
+#rightThirdBlock {
+    top: 515px;
+    height: 110px;
+    left: auto; 
+    right: 0px;
+    width: calc(30% - 20px);
+    padding-top: 15px;
+}
+
+#middleThirdBlock {
+    top: 515px;
+    height: 110px;
+    left: auto; 
+    right: 45%;
+    transform: translateX(50%);
+    width: calc(30% - 40px);
+    padding-top: 15px;
+}
+
+/*
+    Account
+*/
+#account {
+    position: absolute;
+    left: 250px;
+    width: calc(100% - 300px);
+    align-items: center;
+}
+
+h5 {
+    font-weight: 200;
+    font-size: 1.1em;
+    color: rgb(169, 169, 169);
+    margin-top: -15px;
+}
+
+.listLeft {
+    text-align: left;
+    padding-left: 25px;
+}
+.listRight {
+    position: absolute;
+    left: auto; 
+    right: 0px; 
+    text-align: right;
+    padding-right: calc(3% + 15px);
+    padding-top: 30px; 
+}
+.listRow {
+    padding: 0px;
+    margin: 0px;
+}
+
+/*
+    Calculator
+*/
+#calculator {
+    position: absolute;
+    left: 250px;
+    width: calc(100% - 300px);
+}
+
+.inputBlock {
+    position: absolute;
+    background-color: transparent;
+    border-radius: 20px;
+    height: 100px; 
+    left: min(10%,600px);
+    width: calc(45% - 20px);
+    text-align: left; 
+    color: white;
+    text-align: center;
+}
+
+.left {
+    left: min(10%,300px);
+}
+.right {
+    left: auto; 
+    right: 0px;
+    width: calc(45% - 20px);
+}
+
+.stakeInput {
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--mainColor); 
+    padding-left: 10px;
+    font-size: 1.2em;
+    color: white; 
+    background-color: var(--pageBgFaded);
+    position: absolute;
+    top: 35px; 
+    left: 5%; 
+}
+
+.inputLabel {
+    text-align: left;
+    position: absolute;
+    top: 25px; 
+    left: 5%; 
+    color: black; 
+}
+
+.maxCalc {
+    background-color: transparent;
+    border: 0px solid white; 
+    color: white;
+    font-size: 1em;
+    position: absolute;
+    right: calc(5% + 10px);
+    top: 45px;
+}
+.maxCalc:hover {
+    color: var(--mainColor);
+    cursor: pointer;
+}
+#tokenAmountBlock {
+    top: 290px;
+}
+#APYBlock {
+    top: 290px;
+}
+#tokenPricePurchaseBlock {
+    top: 380px;
+}
+#tokenPriceFutureBlock {
+    top: 380px;
+}
+
+.slidecontainer {
+    position: absolute; 
+    width: 100%; 
+    left: min(13%,300px);
+    top: 475px;
+  }
+  
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    .slider[type='range'] {
+      overflow: hidden;
+      -webkit-appearance: none;
+      width: 85%; 
+      background-color: var(--pageBgFaded);
+      border-radius: 10px; 
+    }
+    
+    .slider[type='range']::-webkit-slider-runnable-track {
+      height: 21px;
+      -webkit-appearance: none;
+      color: black;
+      margin-top: -1px;
+    }
+    
+    .slider[type='range']::-webkit-slider-thumb {
+      width: 21px;
+      -webkit-appearance: none;
+      height: 21px;
+      border-radius: 10px;
+      cursor: ew-resize;
+      border: 2px solid var(--mainColor);
+      background: var(--pageBgFaded);
+      box-shadow: -1000px 0 0 987px var(--mainColor);
+      margin-top: 0px;
+      padding-left: 3px;
+    }
+
+}
+/** FF*/
+.slider[type="range"]::-moz-range-progress {
+  background-color: var(--mainColor); 
+}
+.slider[type="range"]::-moz-range-track {  
+  background-color:  var(--pageBgFaded);
+}
+/* IE*/
+.slider[type="range"]::-ms-fill-lower {
+  background-color: var(--mainColor); 
+}
+.slider[type="range"]::-ms-fill-upper {  
+  background-color:  var(--pageBgFaded)
+}
+
+#selectedRange {
+    color: black;
+    font-size: 1.2em; 
+}
+
+.calc_left {
+    position: absolute;
+    color: rgb(169, 169, 169);
+    left: 0px; 
+    font-size: 1.1em; 
+}
+.calc_right {
+    position: absolute;
+    color: white; 
+    left: 75%;
+}
+
+/*
+    Flooz
+*/
+#flooz {
+    position: absolute;
+    left: 250px;
+    width: calc(100% - 300px);
+}
